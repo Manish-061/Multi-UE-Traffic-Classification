@@ -3,7 +3,7 @@
 - **Problem Statement** - Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
 - **Team name** - 01
 - **Team members (Names)** - Sumit Kumar Singh, Devashish Kumar Rishi, Manish Kumar
-- **Demo Video Link** - [Link to YouTube Demo Video]
+- **Demo Video Link** - [\[Link to YouTube Demo Video\]](https://youtu.be/RIMT719j3vs)
 
 ### Project Artefacts
 
