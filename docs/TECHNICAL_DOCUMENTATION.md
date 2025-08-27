@@ -86,7 +86,7 @@ The traffic classification model is an XGBoost (Extreme Gradient Boosting) class
     -   Confusion Matrix
     -   Inference Latency
 
-*You can add a screenshot of the Confusion Matrix here.*
+![Confusion Matrix](../screenshots/confusion_matrix.png)]
 
 ## Implementation Details
 
@@ -99,7 +99,7 @@ The traffic classification model is an XGBoost (Extreme Gradient Boosting) class
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Manish-061/Multi-UE-Traffic-Classification
     cd multi_ue_traffic_classifier
     ```
 
