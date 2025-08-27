@@ -1,0 +1,18 @@
+{
+  "train_ues": [
+    "synthetic_UE_000",
+    "synthetic_UE_007",
+    "synthetic_UE_002",
+    "synthetic_UE_009",
+    "synthetic_UE_004",
+    "synthetic_UE_003",
+    "synthetic_UE_006"
+  ],
+  "val_ues": [
+    "synthetic_UE_005"
+  ],
+  "test_ues": [
+    "synthetic_UE_008",
+    "synthetic_UE_001"
+  ]
+}

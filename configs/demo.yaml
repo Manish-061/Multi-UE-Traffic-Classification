@@ -1,0 +1,60 @@
+# Demo Configuration
+
+api_settings:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1
+  reload: true
+  log_level: "info"
+
+demo_data:
+  sample_flows: 100
+  ue_ids: ["UE_001", "UE_002", "UE_003"]
+  classes_to_demo: 
+    - "video_streaming"
+    - "gaming"
+    - "browsing"
+    - "audio_calls"
+
+dashboard:
+  title: "Multi-UE Traffic Classifier"
+  theme: "light"
+  auto_refresh_seconds: 30
+  max_display_flows: 1000
+
+qos_mapping:
+  gaming:
+    priority: 1
+    qci: 3
+    delay_budget_ms: 50
+    description: "Ultra-low latency gaming"
+  audio_calls:
+    priority: 2
+    qci: 1
+    delay_budget_ms: 100
+    description: "Voice communication"
+  video_calls:
+    priority: 3
+    qci: 2
+    delay_budget_ms: 150
+    description: "Video conferencing"
+  video_streaming:
+    priority: 4
+    qci: 6
+    delay_budget_ms: 300
+    description: "Entertainment streaming"
+  browsing:
+    priority: 5
+    qci: 8
+    delay_budget_ms: 300
+    description: "Web browsing"
+  video_uploads:
+    priority: 6
+    qci: 9
+    delay_budget_ms: 300
+    description: "Content uploads"
+  texting:
+    priority: 7
+    qci: 9
+    delay_budget_ms: 300
+    description: "Text messaging"

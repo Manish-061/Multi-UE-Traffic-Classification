@@ -1,0 +1,64 @@
+# Data Configuration for Multi-UE Traffic Classifier
+
+data_sources:
+  public_datasets:
+    - name: "CIC-IDS2017"
+      url: "https://www.unb.ca/cic/datasets/ids-2017.html"
+      features: 78
+      flows: 2800000
+      priority: high
+    - name: "CIC-UNSW-NB15"  
+      url: "https://www.unb.ca/cic/datasets/cic-unsw-nb15.html"
+      features: 80
+      flows: 2540000
+      priority: high
+    - name: "UNSW-NB15"
+      url: "https://research.unsw.edu.au/projects/unsw-nb15-dataset"
+      features: 49
+      flows: 2540000
+      priority: medium
+
+synthetic_generation:
+  classes:
+    video_streaming:
+      duration_seconds: 1800
+      expected_flows: [500, 1000]
+      characteristics: "High throughput, sustained flows"
+    gaming:
+      duration_seconds: 1200  
+      expected_flows: [800, 1500]
+      characteristics: "Bursty, ultra-low latency"
+    video_calls:
+      duration_seconds: 1200
+      expected_flows: [300, 700]
+      characteristics: "Medium throughput, consistent quality"
+    audio_calls:
+      duration_seconds: 900
+      expected_flows: [200, 500]
+      characteristics: "Small packets, regular timing"
+    browsing:
+      duration_seconds: 1800
+      expected_flows: [1000, 2000]
+      characteristics: "Request-response patterns"
+    video_uploads:
+      duration_seconds: 900
+      expected_flows: [100, 300]
+      characteristics: "High upstream, file-based"
+    texting:
+      duration_seconds: 600
+      expected_flows: [50, 100]
+      characteristics: "Minimal bandwidth, infrequent"
+
+data_splitting:
+  strategy: "ue_based"  # Prevent temporal leakage
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+  min_flows_per_ue: 30
+  min_flows_per_class_per_ue: 5
+
+preprocessing:
+  handle_missing: "median"
+  scale_features: true
+  remove_outliers: true
+  outlier_threshold: 3.0

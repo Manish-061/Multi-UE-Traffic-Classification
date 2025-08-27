@@ -1,0 +1,56 @@
+# XGBoost Model Configuration
+
+model_params:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  random_state: 42
+  n_jobs: -1
+  objective: "multi:softprob"
+  eval_metric: "mlogloss"
+
+training:
+  cross_validation:
+    cv_folds: 5
+    stratified: true
+    shuffle: true
+    random_state: 42
+
+  early_stopping:
+    enabled: true
+    rounds: 10
+    metric: "mlogloss"
+
+  class_weights:
+    gaming: 1.2
+    audio_calls: 1.5
+    video_calls: 1.3
+    video_streaming: 1.0
+    browsing: 1.0
+    video_uploads: 1.4
+    texting: 2.0
+
+hyperparameter_tuning:
+  enabled: false
+  method: "random_search"  # Options: grid_search, random_search, bayesian
+  param_grid:
+    n_estimators: [50, 100, 200]
+    max_depth: [3, 6, 9]
+    learning_rate: [0.01, 0.1, 0.2]
+    subsample: [0.7, 0.8, 0.9]
+  n_iter: 20
+  cv_folds: 3
+
+calibration:
+  enabled: true
+  method: "sigmoid"  # Options: sigmoid, isotonic
+  cv_folds: 5
+
+performance_targets:
+  macro_f1: 0.80
+  per_class_f1: 0.70
+  top_2_accuracy: 0.92
+  calibration_error: 0.05
+  inference_latency_ms: 20

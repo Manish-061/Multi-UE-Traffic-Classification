@@ -1,0 +1,44 @@
+{
+  "train": {
+    "total_flows": 2450,
+    "unique_ues": 7,
+    "class_distribution": {
+      "video_streaming": 350,
+      "gaming": 350,
+      "video_calls": 350,
+      "audio_calls": 350,
+      "browsing": 350,
+      "video_uploads": 350,
+      "texting": 350
+    },
+    "flows_per_ue": 350.0
+  },
+  "val": {
+    "total_flows": 350,
+    "unique_ues": 1,
+    "class_distribution": {
+      "video_streaming": 50,
+      "gaming": 50,
+      "video_calls": 50,
+      "audio_calls": 50,
+      "browsing": 50,
+      "video_uploads": 50,
+      "texting": 50
+    },
+    "flows_per_ue": 350.0
+  },
+  "test": {
+    "total_flows": 700,
+    "unique_ues": 2,
+    "class_distribution": {
+      "video_streaming": 100,
+      "gaming": 100,
+      "video_calls": 100,
+      "audio_calls": 100,
+      "browsing": 100,
+      "video_uploads": 100,
+      "texting": 100
+    },
+    "flows_per_ue": 350.0
+  }
+}
