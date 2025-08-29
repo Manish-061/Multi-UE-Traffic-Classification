@@ -86,7 +86,7 @@ The traffic classification model is an XGBoost (Extreme Gradient Boosting) class
     -   Confusion Matrix
     -   Inference Latency
 
-![Confusion Matrix](../screenshots/confusion_matrix.png)]
+![Confusion Matrix](../screenshots/confusion_matrix.png)
 
 ## Implementation Details
 

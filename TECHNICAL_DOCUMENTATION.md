@@ -48,7 +48,7 @@ The system is designed with a modular architecture, comprising several key compo
 
 Here is the system workflow:
 
-![Multi-UE Traffic Classification](../screenshots/system_architecture.png)
+![Multi-UE Traffic Classification](screenshots/system_architecture.png)
 
 
 1.  **Data Ingestion and Processing**: This component is responsible for ingesting network traffic data from various sources, including PCAP files and live network interfaces. It uses `CICFlowMeter` to extract flow-level features from the raw packet data.
@@ -63,11 +63,11 @@ Here is the system workflow:
 
 6.  **Dashboard**: A Streamlit-based dashboard is provided for visualizing the model's predictions and monitoring the system's performance.
 
-![Home Page](../screenshots/homepage.png)
-<!-- ![Generate Data](../screenshots/generatedata.png) -->
-![Classification Result](../screenshots/classificationresults.png)
-![Classification Result 2](../screenshots/classificationresult2.png)
-![QoS](../screenshots/QoS.png)
+![Home Page](screenshots/homepage.png)
+<!-- ![Generate Data](screenshots/generatedata.png) -->
+![Classification Result](screenshots/classificationresults.png)
+![Classification Result 2](screenshots/classificationresult2.png)
+![QoS](screenshots/QoS.png)
 
 ## Model Details
 
